@@ -1,5 +1,15 @@
 <?php
-  $_domain = getenv(DOMAIN_NAME);
+  function getDomain() {
+    if(isset($_SERVER['HTTPS'])){
+      $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
+    }
+    else {
+      $protocol = 'http';
+    }
+    return $protocol . "://" . $_SERVER['SERVER_NAME'];
+  }
+
+  $_domain = getDomain();
 ?>
 
       <footer>

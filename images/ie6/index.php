@@ -1,5 +1,15 @@
 <?php
-  $_domain = getenv(DOMAIN_NAME);
+  function getDomain() {
+    if(isset($_SERVER['HTTPS'])){
+      $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
+    }
+    else {
+      $protocol = 'http';
+    }
+    return $protocol . "://" . $_SERVER['SERVER_NAME'];
+  }
+
+  $_domain = getDomain();
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,7 +17,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="3;URL=<?php echo $_domain; ?>">
-    <link rel="stylesheet" href="<?php echo $_domain; ?>">/styles/error.css" />
+    <link rel="stylesheet" href="<?php echo $_domain; ?>/styles/error.css" />
     <title>Error - There is nothing to do here</title>
   </head>
 
