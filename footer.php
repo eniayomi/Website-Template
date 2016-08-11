@@ -24,7 +24,7 @@
             <img src="images/opera.png" title="Compatible with Opera" alt="Opera" />
           </p>
           <p title="Please make sure to understand your rights when using this template">
-            <a href="https://github.com/QuentinCG/Website-Template" id="legal_notice">All rights reserved © 2011-<?php echo date('Y'); ?></a>
+            <a href="https://github.com/QuentinCG/Website-Template" id="legal_notice" target=_blank>All rights reserved © 2011-<?php echo date('Y'); ?></a>
           </p>
         </div>
       </footer>
