@@ -1,0 +1,343 @@
+﻿/*
+ * \brief Main website style
+ *
+ * \author Quentin Comte-Gaz <quentin@comte-gaz.com>
+ * \date 11 August 2016
+ * \license MIT License (contact me if too restrictive)
+ * \copyright Copyright (c) 2016 Quentin Comte-Gaz
+ * \version 1.0
+ */
+
+/* ------------------------------- Font-face ------------------------------- */
+@font-face
+{
+  font-family: 'Champagne';
+  src: url('../fonts/champagne.eot');
+  src: url('../fonts/champagne.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/champagne.woff') format('woff'),
+       url('../fonts/champagne.ttf') format('truetype'),
+       url('../fonts/champagne.svg#Champagne') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face
+{
+  font-family: 'Dancing';
+  src: url('../fonts/dancing.eot');
+  src: url('../fonts/dancing.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/dancing.woff') format('woff'),
+       url('../fonts/dancing.ttf') format('truetype'),
+       url('../fonts/dancing.svg#Dancing') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* --------------------------- Main page elements --------------------------- */
+body
+{
+  /* Background gradient of the current page for all browsers */
+  background-image: linear-gradient(bottom, rgb(255,255,255) 11%, rgb(183,183,183) 73%, rgb(140,140,140) 92%); /* CSS standard -> New browsers */
+  background-image: -o-linear-gradient(bottom, rgb(255,255,255) 11%, rgb(183,183,183) 73%, rgb(140,140,140) 92%); /* Opera 11+ */
+  background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 11%, rgb(183,183,183) 73%, rgb(140,140,140) 92%); /* Firefox 3.6+ */
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.11, rgb(255,255,255)),color-stop(0.73, rgb(183,183,183)),color-stop(0.92, rgb(140,140,140))); /* Safari 4+, Chrome 2+ */
+  background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 11%, rgb(183,183,183) 73%, rgb(140,140,140) 92%); /* Safari 5.1+, Chrome 10+ */
+  background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 11%, rgb(183,183,183) 73%, rgb(140,140,140) 92%); /* IE9+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#8C8C8C, endColorstr=#ffffff); /* IE 5.5-7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#8C8C8C, endColorstr=#ffffff)"; /* IE 8-9 */
+  background-color: #8C8C8C; /* No background gradient for old browser */
+
+  font-family: "Trebuchet MS", Arial, "Times New Roman", "Arial Black", sans-serif; /* Default font-face */
+  font-size: 1em; /* Default size */
+  font-weight: normal; /* Default weight */
+  font-style: normal; /* Default style */
+  color: #181818; /* Default color */
+  word-wrap: break-word; /* Avoid text overtake */
+}
+
+#page
+{
+  width: 900px; /* Page size */
+  margin: auto; /* Centering the page */
+}
+
+a img /* For Internet Explorer: Don't display blue squares if the image is a link */
+{
+  border:none;
+}
+
+/* --------------------------------- Header --------------------------------- */
+header
+{
+  margin-top: 2px; /* Margin with top of page */
+  margin-bottom: 25px;
+  height: 200px;
+  border-radius: 16px; /* Rounded edges header */
+  background: url('../images/banner.jpg') no-repeat; /* Background header */
+  box-shadow: 0 10px 10px #1c1a19; /* Shadow effect */
+  position: relative;
+}
+
+header #banner_description
+{
+  position: absolute; /* Have a fixed reference */
+  bottom: 0;
+  width: 99.55%;
+  height: 20px;
+  padding-top: 15px;
+  padding-left: 4px;
+  background-color: rgb(24,24,24); /* Background for old browsers */
+  background-color: rgba(24,24,24,0.7); /* Background with opacity */
+  color: white; /* Text color */
+  border-radius: 0 0 15px 15px; /* Round the banner */
+}
+
+/* Bannner must be 450px*40px (can be modified here) */
+header #banner_title
+{
+  position: absolute; /* Have a fixed reference */
+  right: 450px;
+  bottom: 40px;
+  font-family: 'Champagne', "French Script MT", Georgia, "Comic Sans MS", "Times New Roman", "Trebuchet MS", serif;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+header #banner_more
+{
+  position: absolute; /* Have a fixed reference */
+  left: 20px;
+  bottom: -24px;
+  font-family: "French Script MT", "Times New Roman", Georgia,"Comic Sans MS", serif;
+  font-size: 1.8em;
+  font-weight: normal;
+}
+
+
+/* ---------------------------------- Menu ---------------------------------- */
+#menu
+{
+  display:block;
+  margin-left: 10%; /* Menu is placed at 10% from left */
+  margin-right: 10%; /* Menu can't be at more than 10% from right */
+  margin-bottom: 85px; /* Avoid next elements to be the same height */
+  margin-top: 30px;
+}
+
+#menu ul
+{
+  list-style-type: none; /* Delete the dots shown by list display */
+}
+
+#menu li
+{
+  margin-right: 10px; /* Space between the elements of the list */
+}
+
+#menu ul li a
+{
+  padding: 3px 3px 3px 3px;
+}
+
+/* List of buttons */
+#menu ul li
+{
+  float:left; /* Put elements side by side */
+  list-style:none; /* Delete items set by the browser for lists */
+  height:30px;
+  font-size: 1.2em;
+}
+
+/* Button */
+#menu ul li a
+{
+  display:block; /* Easier to use block in order to design the buttons */
+  height:25px
+  padding:5px 20px 0px 10px;
+  font-weight:bold;
+  color:#999; /* Text color without mouse hover */
+  text-decoration:none; /* Delete elements used by the browser for links */
+  border:1px solid black; /* Strong effect */
+  text-shadow:-1px -1px 0px #000; /* Small shadow effect for text */
+  background:#333; /* Button background color */
+  background:-moz-linear-gradient(top,#555 10%,#111 80%); /* Gradient effect for suitable browsers */
+  background:-webkit-gradient(linear,left top,left bottom,color-stop(0.1,#555),color-stop(0.8,#111));
+  border-radius:10px;
+  -moz-border-radius:10px; /* Round the edges */
+  -webkit-border-radius: 10px;
+  box-shadow: 0px 4px 4px #1c1a19; /* Button shadow effect */
+}
+
+/* Hovered button */
+#menu ul li a:hover
+{
+  color:#ddd; /* Text color when button-hover */
+  text-shadow:0px 0px 5px #fff; /* Text Shadow when button-hover */
+  background:#111; /* Background color when button-hover */
+  background:-moz-linear-gradient(top,#000,#111);
+  background:-webkit-gradient(linear,left top,left bottom,from(#000),to(#111));
+}
+
+
+/* -------------------------------- Section -------------------------------- */
+article
+{
+  border : 1px solid #e6e6e6;
+  border-radius: 18px;
+  box-shadow: 0px 10px 10px #1c1a19;
+  border:1px solid #e6e6e6;
+  color:#404040;
+  margin-bottom: 20px;
+}
+
+.article_with_image
+{
+  background:#e6e6e6 url('../images/article.png') no-repeat 20px 15px; /* Add image to display with the article */
+}
+
+
+article h1
+{
+  padding: 15px 10px 10px 100px; /* To avoid text to be above the image */
+  color:#696969;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Trebuchet MS","Times New Roman",serif;
+}
+
+article p
+{
+  padding: 0 45px 10px 155px;
+  color: #696969;
+  font-style: normal;
+  font-weight: normal;
+  text-align: justify;
+  font-family: "Times New Roman",serif;
+}
+
+/* Link style */
+article p a
+{
+  text-decoration:none;
+  color:#444;
+}
+
+article p a:hover
+{
+  text-decoration:none;
+  color:#111;
+}
+
+article h1
+{
+  font-size:1.2em;
+  font-style:normal;
+  text-shadow:2px 2px 2px #696969;
+}
+
+article h2
+{
+  padding: 0 0 0 130px;
+  font-size: 1.1em;
+  color:#666;
+  font-style: normal;
+  font-weight: bold;
+  font-family: "Times New Roman",serif;
+  text-shadow:2px 2px 2px #999;
+}
+
+article p
+{
+  font-size:0.9em;
+  font-style:normal;
+}
+
+.contact /* Contact info position */
+{
+  margin-left:55px;
+}
+
+article
+{
+  margin-bottom:-3px; /* Pour centrer avec le texte */
+}
+
+/* Image in article are displayed on left */
+article img {
+  float:left;
+  border-radius: 5px; /* Rounded edges image */
+}
+
+
+/* --------------------------------- Bottom --------------------------------- */
+footer
+{
+  text-align: center; /* Center footer */
+  padding-top: 20px;
+}
+
+footer h1, footer a, footer #legal_notice
+{
+  font-size:1em;
+  color:#696969;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration:none;
+  font-family: "Trebuchet MS", "Times New Roman", serif;
+}
+
+footer div p, footer div span
+{
+  font-size:1em;
+}
+
+footer #w3c_compatibility
+{
+  font-size:0.9em;
+}
+
+footer #w3c_compatibility img, footer #w3c_compatibility p img
+{
+  margin-right: 8px; /* Space between image */
+}
+
+footer h1 a:hover,footer #legal_notice:hover
+{
+  color:#333;
+}
+
+/* ---------------------------- Button to go top ---------------------------- */
+
+#toTop
+{
+  display:none;
+  text-decoration:none;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  overflow:hidden;
+  width:51px;
+  height:51px;
+  border:none;
+  text-indent:100%;
+  background:url('../images/ui.totop.png') no-repeat left top;
+}
+
+#toTopHover
+{
+  background:url('../images/ui.totop.png') no-repeat left -51px;
+  width:51px;
+  height:51px;
+  display:block;
+  overflow:hidden;
+  float:left;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus
+{
+  outline:none;
+}
