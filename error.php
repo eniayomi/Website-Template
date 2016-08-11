@@ -118,7 +118,7 @@
            You will be redirected to the homepage in a few seconds.
         </strong>
         </br></br>
-        <img src="../images/forbidden.png" alt=""/>
+        <img src="images/forbidden.png" alt=""/>
       </p>
       </article>
     </section>
