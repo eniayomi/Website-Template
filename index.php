@@ -15,7 +15,7 @@
         <article class="article_with_image">
           <h1>Dummy article #1</h1>
           <p>
-            <img src="images/dummy.png" width="80" />
+            <img src="images/dummy.png" width="80" alt="Image to delete" />
             Iamque non umbratis fallaciis res agebatur, sed qua palatium est
             extra muros, armatis omne circumdedit. ingressusque obscuro iam die,
             ablatis regiis indumentis Caesarem tunica texit et paludamento
