@@ -6,7 +6,7 @@ This project is a template for most of my websites.
 
 It is a basic example to easily create website.
 
-<img src="example.png" width="400">
+<img src="example.png" width="700">
 
 Example of websites using this template:
  - https://quentin.comte-gaz.com
