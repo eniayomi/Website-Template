@@ -9,7 +9,6 @@
 
   include 'header.php';
 ?>
-
       <section>
 
         <article class="article_with_image">
@@ -73,7 +72,6 @@
         </article>
 
       </section>
-
 <?php
   include("footer.php");
 ?>

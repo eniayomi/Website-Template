@@ -11,14 +11,13 @@
 
   $_domain = getDomain();
 ?>
-
       <footer>
         <div>
           <p id="w3c_compatibility">
             <a href="https://jigsaw.w3.org/css-validator/validator?uri=<?php echo $_domain; ?>&profile=css3" target=_blank><img src="images/css_ok.png" title="Note: W3C does not allow browser specific elements... This means W3C test will give some false positive errors." alt="Valid CSS 3" /></a>
             <a href="https://validator.w3.org/check?uri=<?php echo $_domain; ?>" target=_blank><img src="images/html_ok.png" title="Valid HTML 5 website" alt="Valid HTML 5" /></a>
-            <img src="images/IE.png" title="Compatible with Internet Explorer (but not optimized for old version)"  alt="Intenet Explorer" />
-            <img src="images/chrome.png" title="Compatible with Google Chrome"  alt="Google Chrome" />
+            <img src="images/IE.png" title="Compatible with Internet Explorer (but not optimized for old version)" alt="Intenet Explorer" />
+            <img src="images/chrome.png" title="Compatible with Google Chrome" alt="Google Chrome" />
             <img src="images/firefox.png" title="Compatible with Firefox" alt="Firefox" />
             <img src="images/safari.png" title="Compatible with Safari" alt="Safari" />
             <img src="images/opera.png" title="Compatible with Opera" alt="Opera" />
